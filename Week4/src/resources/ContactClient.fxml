@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bpane" prefHeight="494.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.waketech.contactclient.controller.ClientController">
+   <center>
+      <VBox fx:id="vboxMain" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" editable="true" prefHeight="350.0" prefWidth="576.0">
+              <columns>
+                <TableColumn fx:id="columnID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="columnName" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="columnAddress" prefWidth="123.0" text="Address" />
+                  <TableColumn fx:id="columnCellPhone" prefWidth="127.0" text="CellPhone" />
+                  <TableColumn fx:id="columnEmail" prefWidth="174.0" text="Email" />
+              </columns>
+            </TableView>
+            <AnchorPane prefHeight="63.0" prefWidth="576.0">
+               <children>
+                  <Button fx:id="buttonAdd" layoutX="141.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnAddNewEntry" text="Add New" />
+                  <Button fx:id="buttonDelete" layoutX="249.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnDeleteEntry" text="Delete" />
+                  <Button fx:id="buttonUpdate" layoutX="357.0" layoutY="8.0" mnemonicParsing="false" onAction="#btnUpdateData" text="Update" />
+               </children>
+            </AnchorPane>
+         </children></VBox>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="110.0" prefWidth="576.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="81.0" layoutY="25.0" prefHeight="32.0" prefWidth="34.0" text="Name" />
+            <Label layoutX="70.0" layoutY="49.0" prefHeight="36.0" prefWidth="47.0" text="Address" />
+            <Label layoutX="234.0" layoutY="27.0" prefHeight="32.0" prefWidth="72.0" text="CellPhone" />
+            <Label layoutX="234.0" layoutY="50.0" prefHeight="36.0" prefWidth="47.0" text="Email" />
+            <Label layoutX="411.0" layoutY="25.0" prefHeight="36.0" prefWidth="47.0" text="ID" />
+            <TextField fx:id="textfName" layoutX="115.0" layoutY="29.0" prefHeight="25.0" prefWidth="114.0" />
+            <TextField fx:id="textfAddress" layoutX="115.0" layoutY="55.0" prefHeight="25.0" prefWidth="114.0" />
+            <TextField fx:id="textfCell" layoutX="290.0" layoutY="30.0" prefHeight="25.0" prefWidth="114.0" />
+            <TextField fx:id="textfEmail" layoutX="290.0" layoutY="56.0" prefHeight="25.0" prefWidth="149.0" />
+            <TextField fx:id="textfID" layoutX="436.0" layoutY="31.0" prefHeight="25.0" prefWidth="114.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
